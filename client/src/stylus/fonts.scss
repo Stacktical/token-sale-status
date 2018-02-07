@@ -1,0 +1,36 @@
+@include font-face(
+  "Stacktical",
+  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont",
+  ("woff2", "woff, ttf, eot")
+) {
+  font-style: normal;
+  font-weight: 200;
+}
+
+
+@include font-face(
+  "Stacktical",
+  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-regular-webfont",
+  ("woff2", "woff, ttf, eot")
+) {
+  font-style: normal;
+  font-weight: 400;
+}
+
+@include font-face(
+  "Stacktical",
+  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-bold-webfont",
+  ("woff2", "woff, ttf, eot")
+) {
+  font-style: normal;
+  font-weight: 600;
+}
+
+@include font-face(
+  "Alte Din",
+  "/static/fonts/staktical_fonts/alte-din/alte-din-regular-webfont",
+  ("woff2", "woff")
+) {
+  font-style: normal;
+  font-weight: 600;
+}
