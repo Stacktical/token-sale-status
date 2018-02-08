@@ -3,7 +3,11 @@
 @import './fonts.scss';
 @import './palette.scss';
 
-
 #app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $primary-text-color;
+  margin-top: 60px;
   font-family: 'Stacktical Sans Light', sans-serif;
 }
