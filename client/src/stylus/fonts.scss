@@ -1,36 +1,59 @@
-@include font-face(
-  "Stacktical",
-  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont",
-  ("woff2", "woff, ttf, eot")
-) {
-  font-style: normal;
-  font-weight: 200;
+// https://fonts.google.com/specimen/Merriweather+Sans
+
+@font-face {
+    font-family: 'Alte Din';
+    src: url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot');
+    src: url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff2') format('woff2'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff') format('woff'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.ttf') format('truetype'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.svg#stacktical_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+@font-face {
+    font-family: 'Stacktical Sans Light';
+    src: url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.eot');
+    src: url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff2') format('woff2'),
+         url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff') format('woff'),
+         url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.ttf') format('truetype'),
+         url('/static/fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.svg#stacktical_sansbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-@include font-face(
-  "Stacktical",
-  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-regular-webfont",
-  ("woff2", "woff, ttf, eot")
-) {
-  font-style: normal;
-  font-weight: 400;
 }
 
-@include font-face(
-  "Stacktical",
-  "/static/fonts/staktical_fonts/stackticalsans-light-webfont/stackticalsans-bold-webfont",
-  ("woff2", "woff, ttf, eot")
-) {
-  font-style: normal;
-  font-weight: 600;
+@font-face {
+    font-family: 'Stacktical Sans';
+    src: url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.eot');
+    src: url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff') format('woff'),
+         url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.ttf') format('truetype'),
+         url('/static/fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.svg#stacktical_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@include font-face(
-  "Alte Din",
-  "/static/fonts/staktical_fonts/alte-din/alte-din-regular-webfont",
-  ("woff2", "woff")
-) {
-  font-style: normal;
-  font-weight: 600;
+@font-face {
+    font-family: 'Stacktical Sans Bold';
+    src: url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot');
+    src: url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff2') format('woff2'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff') format('woff'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.ttf') format('truetype'),
+         url('/static/fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.svg#stacktical_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alte Din';
+    src: url('/static/fonts/alte-din/alte-din-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/alte-din/alte-din-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
