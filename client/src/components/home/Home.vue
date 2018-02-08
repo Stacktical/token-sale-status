@@ -1,12 +1,6 @@
-<template>
-    <div class="home">
-      <h1>Token Status Sales</h1>
-    </div>
-</template>
-
+<template src='@/components/home/home.html'></template>
+<style src='@/components/home/home.scss' lang='scss'></style>
 <script>
-
-
 export default {
   name: 'home',
   data() {
