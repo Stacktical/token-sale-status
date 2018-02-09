@@ -3,12 +3,25 @@
 @import './fonts.scss';
 @import './palette.scss';
 
+
+html {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $primary-text-color;
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   font-family: 'Stacktical Sans Light', sans-serif;
 }
