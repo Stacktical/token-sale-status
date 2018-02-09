@@ -11,6 +11,12 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/:address',
+      name: 'Address',
+      props: true,
+      component: Home
     }
   ]
 })

@@ -7,19 +7,20 @@
 import EtherService from '@/components/progress-bar/progress-bar.service.js'
 
 export default {
-  name: 'Prgress-Bar',
+  name: 'Progress-Bar',
+  props: [
+    'icoAddress'
+  ],
   data () {
     return {
-      icoAddress: '0x9df3a24d738ae98dea766cd89c3aef16583a4daf',
       ethRaised: 0,
       ethBalance: 0,
-      totalSupply: 0,
-      icoAddress: '0x9df3A24d738ae98dEa766cD89C3AEf16583a4daF'
+      totalSupply: 0
     }
   },
   created () {
     EtherService.getTotalEthBalance(this, this.icoAddress).then((response) => {
-      this.ethBalance = response.body.result / 1e18;
+      this.ethBalance = response.body.result / 1e18
     })
 
     EtherService.getTotalTxs(this, this.icoAddress).then((response) => {
@@ -29,11 +30,11 @@ export default {
           total += response.body.result[i].value / 1e18
         }
       }
-      this.ethRaised = total;
+      this.ethRaised = total
     })
 
     EtherService.getTotalTokenSupply(this, this.icoAddress).then((response) => {
-      this.totalSupply = response.body.result;
+      this.totalSupply = response.body.result
     })
   },
   methods: {
