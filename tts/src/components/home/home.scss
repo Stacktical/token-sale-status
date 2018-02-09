@@ -24,6 +24,8 @@
     color: $primary-text-color;
     border-radius: 4px;
     .content {
+      display: flex;
+      width: 100%;
       padding: $box-space-64;
     }
   }

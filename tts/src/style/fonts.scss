@@ -4,6 +4,8 @@
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -12,6 +14,8 @@
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -20,14 +24,8 @@
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot") format("eot");
-}
-
-@font-face {
- font-family: "Alte Din Bold";
- src: url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff2") format("woff2"),
-        url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff") format("woff"),
-        url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.ttf") format("ttf"),
-        url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
