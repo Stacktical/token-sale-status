@@ -1,6 +1,11 @@
-<div class="progress-bar">
+<div class="container-progress">
   <p>ICO Address: {{ icoAddress }}</p>
   <p>ETH Balance = {{ ethBalance }} ETH</p>
   <p>ETH Raised = {{ ethRaised }} ETH</p>
   <p>Total token supply  = {{ totalSupply }} </p>
+  <b-progress height="40px" class="mt-1" :max="max" show-value>
+      <b-progress-bar :value="400" class="blue"></b-progress-bar>
+      <b-progress-bar :value="300" class="yellow"></b-progress-bar>
+      <b-progress-bar :value="100" class="red"></b-progress-bar>
+    </b-progress>
 </div>
