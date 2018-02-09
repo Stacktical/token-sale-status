@@ -25,11 +25,15 @@ export default {
 
     EtherService.getTotalTxs(this, this.icoAddress).then((response) => {
       var total = 0
+      var totalWOGas = 0
       for (var i = 0; i < response.body.result.length; i++) {
         if (response.body.result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf') {
-          total += response.body.result[i].value / 1e18
+          total += (response.body.result[i].value - response.body.result[i].cumulativeGasUsed) / 1e18
+          totalWOGas += (response.body.result[i].value) / 1e18
         }
       }
+      console.log(total)
+      console.log(totalWOGas)
       this.ethRaised = total
     })
 

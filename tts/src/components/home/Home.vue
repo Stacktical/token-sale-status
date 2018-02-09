@@ -23,7 +23,6 @@ export default {
     } else {
       this.icoAddress = this.address
     }
-    console.log(this.icoAddress)
   },
 
   components: {
