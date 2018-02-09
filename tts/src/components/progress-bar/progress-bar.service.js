@@ -1,20 +1,30 @@
 // var SOFT_CAP = 4350
 // var MAX_CAP = (10 - 1.5) * 1000000 / 1150
-var icoAddress = '0x9df3a24d738ae98dea766cd89c3aef16583a4daf'
-var tokenAddress = "0xeb9951021698b42e4399f9cbb6267aa35f82d59d"
+// var tokenAddress = "0xeb9951021698b42e4399f9cbb6267aa35f82d59d"
 var apiKey = '3X39K1K7RZZN5HW37TUYH56GFVEZZWV45K'
 // var contributorAddress = userAddress;
 // var maxUnverifiedContribution = 15
 
 export default {
-  getTotalEthBalance (context) {
+  getTotalEthBalance (context, icoAddress) {
     var params = {
-      module: 'proxy',
-      action: 'eth_call',
+      module: 'account',
+      action: 'balance',
       tag: 'latest',
-      to: icoAddress,
-      data: '0x4042b66f',
-      apikey: apiKey,
+      address: icoAddress,
+      apikey: apiKey
+    }
+    return context.$http.get('https://api.etherscan.io/api', {params: params})
+  },
+  getTotalTxs (context, icoAddress) {
+    var params = {
+      module: 'account',
+      action: 'txlist',
+      address: icoAddress,
+      startblock: 0,
+      endblock: 99999999,
+      sort: 'asc',
+      apikey: apiKey
     }
     return context.$http.get('https://api.etherscan.io/api', {params: params})
   }
