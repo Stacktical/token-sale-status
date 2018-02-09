@@ -13,7 +13,8 @@ export default {
       icoAddress: '0x9df3a24d738ae98dea766cd89c3aef16583a4daf',
       ethRaised: 0,
       ethBalance: 0,
-      icoAddress: '0x9df3a24d738ae98dea766cd89c3aef16583a4daf'
+      totalSupply: 0,
+      icoAddress: '0x9df3A24d738ae98dEa766cD89C3AEf16583a4daF'
     }
   },
   created () {
@@ -29,6 +30,10 @@ export default {
         }
       }
       this.ethRaised = total;
+    })
+
+    EtherService.getTotalTokenSupply(this, this.icoAddress).then((response) => {
+      this.totalSupply = response.body.result;
     })
   },
   methods: {

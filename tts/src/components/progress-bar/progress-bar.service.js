@@ -27,11 +27,17 @@ export default {
       apikey: apiKey
     }
     return context.$http.get('https://api.etherscan.io/api', {params: params})
+  },
+  getTotalTokenSupply (context, icoAddress) {
+    var params = {
+      module: 'stats',
+      action: 'tokensupply',
+      contractaddress: icoAddress,
+      apikey: apiKey
+    }
+    return context.$http.get('https://api.etherscan.io/api', {params: params})
   }
 }
-
-//
-//
 //
 // // Get total ETH raised in wei unit, returns promise
 // function getEthSent(contributor) {
