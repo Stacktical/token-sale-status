@@ -12,6 +12,8 @@
   justify-content: flex-start;
   font-size: 2rem;
   overflow: auto;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 150px;
   background: $primary-color-dark;
 
@@ -36,6 +38,36 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      &__caps {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: $box-space-32;
+        &-block {
+          min-height: 150px;
+          width: calc(100% / 3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: $alt-text-color;
+          padding: $box-space-16;
+
+          span {
+            font-weight: 400;
+            font-size: 1.6rem;
+          }
+          &.soft {
+            background: lighten(#F47B2E, 10%);
+            border-radius: 4px 0px 0px 4px;
+          }
+          &.mid {
+            background: #F47B2E;
+            border-radius: 0px 4px 4px 0px;
+          }
+        }
       }
     }
   }

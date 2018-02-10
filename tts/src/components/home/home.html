@@ -6,7 +6,17 @@
       <div class="content__address">
         ICO Address: {{ icoAddress }}
       </div>
-      <ProgressBar :ico-address="icoAddress" ></ProgressBar>
+      <ProgressBar :ico-address="icoAddress" :softCap="softCap" :midCap="midCap" :max="max"></ProgressBar>
+      <div class="content__caps">
+        <div class="content__caps-block soft">
+          <span>{{ softCap }} ETH</span>
+          Soft Capt
+        </div>
+        <div class="content__caps-block mid">
+          <span>{{ midCap }} ETH</span>
+          Mid Capt
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -9,16 +9,17 @@ import EtherService from '@/components/progress-bar/progress-bar.service.js'
 export default {
   name: 'Progress-Bar',
   props: [
-    'icoAddress'
+    'icoAddress',
+    'softCap',
+    'midCap',
+    'max'
   ],
   data () {
     return {
       ethRaised: 0,
       ethBalance: 0,
       totalSupply: 0,
-      softCap: 7000,
-      midCap: 12000,
-      max: 30000
+      striped: true
     }
   },
   computed: {

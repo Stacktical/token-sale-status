@@ -13,7 +13,10 @@ export default {
   ],
   data () {
     return {
-      icoAddress: undefined
+      icoAddress: undefined,
+      softCap: 7000,
+      midCap: 12000,
+      max: 30000
     }
   },
   created () {

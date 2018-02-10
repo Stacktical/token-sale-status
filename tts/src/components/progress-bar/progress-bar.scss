@@ -10,10 +10,10 @@
   .progress {
     width: 100%;
     .progress-bar.blue{
-      background-color: $success-primary-color;
+      background: #F47B2E;
     }
     .progress-bar.yellow{
-      background-color: $warning-primary-color;
+      background: lighten(#F47B2E, 10%);
     }
     .progress-bar.red{
       background-color: $danger-primary-color;
@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: $box-space-32;
+    margin-top: $box-space-16;
     font-weight: 200;
 
     &__soft {
