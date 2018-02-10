@@ -17,6 +17,14 @@
   padding-bottom: 150px;
   background: $primary-color-dark;
 
+  .divider {
+    width: 25%;
+    height: 2px;
+    background-color: $background-color-dark;
+    margin-top: $box-space-16;
+    margin-bottom: $box-space-24;
+  }
+
   .container {
     max-width: 1232px;
     width: 100%;
@@ -34,6 +42,47 @@
       padding-right: 10%;
       padding: $box-space-64 10% $box-space-64 10% ;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .container-blocks {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $box-space-32;
+        margin-top: $box-space-32;
+      }
+
+      .block {
+        width: calc(100% / 3);
+        display: flex;
+        padding: $box-space-24;
+        min-height: 150px;
+        color: $alt-text-color;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        span {
+          font-weight: 600;
+          margin-bottom: $box-space-8;
+        }
+
+        &-raised {
+          background: $primary-color;
+          border-radius: 4px 0px 0px 4px;
+        }
+
+        &-balance {
+          background: $primary-color-dark;
+        }
+
+        &-totalSupply {
+          background: $primary-color-darker;
+          border-radius: 0px 4px 4px 0px;
+        }
+      }
+      
       &__address {
         display: flex;
         align-items: center;

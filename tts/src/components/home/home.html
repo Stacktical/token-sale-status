@@ -6,7 +6,27 @@
       <div class="content__address">
         ICO Address: {{ icoAddress }}
       </div>
-      <ProgressBar :ico-address="icoAddress" :softCap="softCap" :midCap="midCap" :max="max"></ProgressBar>
+      <div class="divider"></div>
+      <div class="container-blocks">
+        <div class="block block-raised">
+          <span>ETH Raised</span>
+            {{ ethRaised }} ETH
+        </div>
+        <div class="block block-balance">
+          <span>ETH Balance</span>
+           {{ ethBalance }} ETH
+        </div>
+        <div class="block block-totalSupply">
+          <span>Total token supply</span>
+            {{ totalSupply }}
+        </div>
+      </div>
+      <ProgressBar
+          :ico-address="icoAddress"
+          :softCap="softCap"
+          :midCap="midCap"
+          :max="max"
+      ></ProgressBar>
       <div class="content__caps">
         <div class="content__caps-block soft">
           <span>{{ softCap }} ETH</span>
