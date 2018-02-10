@@ -19,4 +19,71 @@
       background-color: $danger-primary-color;
     }
   }
+
+  .container-blocks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $box-space-32;
+    margin-top: $box-space-32;
+  }
+
+  .block {
+    width: calc(100% / 3);
+    display: flex;
+    padding: $box-space-24;
+    min-height: 150px;
+    color: $alt-text-color;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    span {
+      font-weight: 600;
+      margin-bottom: $box-space-8;
+    }
+
+    &-raised {
+      background: $primary-color;
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    &-balance {
+      background: $primary-color-dark;
+    }
+
+    &-totalSupply {
+      background: $primary-color-darker;
+      border-radius: 0px 4px 4px 0px;
+    }
+  }
+
+  .caps {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: $box-space-32;
+    font-weight: 200;
+
+    &__soft {
+      width: 23%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__mid {
+      width: 41%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__infinity {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }

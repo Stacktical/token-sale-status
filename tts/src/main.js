@@ -6,8 +6,10 @@ import router from './router'
 import VueResource from 'vue-resource'
 import VueBootstrap from 'bootstrap-vue'
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap-vue/dist/bootstrap-vue.css"
+import 'bourbon/core/_bourbon.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import '@/style/main.scss'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)

@@ -1,11 +1,34 @@
 <div class="container-progress">
-  <p>ICO Address: {{ icoAddress }}</p>
-  <p>ETH Balance = {{ ethBalance }} ETH</p>
-  <p>ETH Raised = {{ ethRaised }} ETH</p>
-  <p>Total token supply  = {{ totalSupply }} </p>
-  <b-progress height="40px" class="mt-1" :max="max" show-value>
-      <b-progress-bar :value="400" class="blue"></b-progress-bar>
-      <b-progress-bar :value="300" class="yellow"></b-progress-bar>
-      <b-progress-bar :value="100" class="red"></b-progress-bar>
-    </b-progress>
+
+
+  <div class="container-blocks">
+    <div class="block block-raised">
+      <span>ETH Raised</span>
+        {{ ethRaised }} ETH
+    </div>
+    <div class="block block-balance">
+      <span>ETH Balance</span>
+       {{ ethBalance }} ETH
+    </div>
+    <div class="block block-totalSupply">
+      <span>Total token supply</span>
+        {{ totalSupply }}
+    </div>
+  </div>
+
+  <b-progress height="40px" class="mt-1" :max="max">
+    <b-progress-bar v-if="ethRaised > softCap" :value="softCap" class="yellow"></b-progress-bar>
+    <b-progress-bar v-if="ethRaised > midCap" :value="midCap" class="blue" ></b-progress-bar>
+    <b-progress-bar :value="ethRaised - midCap" animated></b-progress-bar>
+  </b-progress>
+
+  <div class="caps">
+    <div class="caps__soft">{{softCap}}</div>
+    <div class="caps__mid">{{midCap}}</div>
+    <div class="caps__infinity">
+      <span>+ {{ ethRaisedWoMid }}</span>
+      <span>Inifinity</span>
+    </div>
+  </div>
+
 </div>

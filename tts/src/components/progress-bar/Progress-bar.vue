@@ -16,7 +16,15 @@ export default {
       ethRaised: 0,
       ethBalance: 0,
       totalSupply: 0,
-      max: 1000
+      softCap: 7000,
+      midCap: 12000,
+      max: 30000
+    }
+  },
+  computed: {
+    ethRaisedWoMid () {
+      var value = this.ethRaised - this.midCap
+      return Math.round(value)
     }
   },
   created () {
