@@ -15,7 +15,7 @@
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 150px;
-  background: $primary-color-dark;
+  background: linear-gradient(to top,#1976d2,$primary-color);
 
   .divider {
     width: 25%;
@@ -44,6 +44,9 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      .transition-group {
+        width: 100%;
+      }
       .container-blocks {
         width: 100%;
         display: flex;
@@ -82,8 +85,9 @@
           border-radius: 0px 4px 4px 0px;
         }
       }
-      
+
       &__address {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -120,4 +124,11 @@
       }
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }

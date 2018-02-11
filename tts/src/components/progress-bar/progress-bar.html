@@ -3,7 +3,7 @@
   <b-progress height="40px" class="mt-1" :max="max">
     <b-progress-bar v-if="ethRaised > softCap" :value="softCap" class="yellow" :striped="striped"></b-progress-bar>
     <b-progress-bar v-if="ethRaised > midCap" :value="midCap" class="blue" ></b-progress-bar>
-    <b-progress-bar :value="ethRaised - midCap" animated></b-progress-bar>
+    <b-progress-bar :value="ethRaisedWoMid" animated></b-progress-bar>
   </b-progress>
 
   <div class="caps">

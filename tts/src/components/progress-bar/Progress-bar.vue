@@ -10,13 +10,11 @@ export default {
     'icoAddress',
     'softCap',
     'midCap',
-    'max'
+    'max',
+    'ethRaised'
   ],
   data () {
     return {
-      ethRaised: 0,
-      ethBalance: 0,
-      totalSupply: 0,
       striped: true
     }
   },

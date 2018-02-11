@@ -7,26 +7,33 @@
         ICO Address: {{ icoAddress }}
       </div>
       <div class="divider"></div>
-      <div class="container-blocks">
-        <div class="block block-raised">
-          <span>ETH Raised</span>
-            {{ ethRaised }} ETH
+      <transition-group class="transition-group" name="fade" mode="out-in">
+        <Spinner v-bind:key="1" v-show="loading"></Spinner>
+        <div v-bind:key="2" v-show="!loading" class="container-blocks">
+          <div class="block block-raised">
+            <span>ETH Raised</span>
+              {{ raised }} ETH
+          </div>
+          <div class="block block-balance">
+            <span>ETH Balance</span>
+             {{ balance }} ETH
+          </div>
+          <div class="block block-totalSupply">
+            <span>Total token supply</span>
+              {{ totalSupply }}
+          </div>
         </div>
-        <div class="block block-balance">
-          <span>ETH Balance</span>
-           {{ ethBalance }} ETH
-        </div>
-        <div class="block block-totalSupply">
-          <span>Total token supply</span>
-            {{ totalSupply }}
-        </div>
-      </div>
-      <ProgressBar
+        <ProgressBar
+          v-bind:key="3"
+          v-show="!loading"
           :ico-address="icoAddress"
+          :ethRaised="ethRaised"
           :softCap="softCap"
           :midCap="midCap"
           :max="max"
-      ></ProgressBar>
+        ></ProgressBar>
+      </transition-group>
+
       <div class="content__caps">
         <div class="content__caps-block soft">
           <span>{{ softCap }} ETH</span>
