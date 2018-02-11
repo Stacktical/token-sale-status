@@ -1,0 +1,68 @@
+@import '../../../style/variables.scss';
+@import '../../../style/palette.scss';
+
+.footer {
+  width: 100%;
+  min-height: 300px;
+  margin-top: $box-space-64;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  &-social {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    &__block {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: $box-space-88;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      img {
+        width: 64px;
+        height: auto;
+        margin-right: $box-space-64;
+        animation: goodRipple .8s linear infinite;
+        border-radius: 50%;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+      }
+    }
+  }
+  &-stacktical {
+    width: 50%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    h1 {
+
+      text-align: left;
+      font-size: 3rem;
+      margin-top: 0px;
+      span {
+        font-weight: 600;
+      }
+    }
+    p {
+      text-align:left;
+      font-size: 1.5rem;
+      font-weight: 200;
+      span {
+        font-weight: 600;
+        padding-left: $box-space-8;
+        padding-right: $box-space-8;
+        background: $accent-color;
+      }
+    }
+  }
+}
+@keyframes goodRipple{0%{box-shadow:0 0 0 0 rgba(139,195,74,.3),0 0 0 .5em rgba(139,195,74,.1),0 0 0 1.5em rgba(139,195,74,.1)}100%{box-shadow:0 0 0 .5em rgba(139,195,74,.1),0 0 0 1.5em rgba(139,195,74,.1),0 0 0 2.5em rgba(139,195,74,0)}}

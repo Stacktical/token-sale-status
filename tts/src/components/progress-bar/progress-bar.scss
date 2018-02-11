@@ -2,6 +2,7 @@
 @import '../../style/variables.scss';
 
 .container-progress {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,6 +10,7 @@
   justify-content: flex-start;
   .progress {
     width: 100%;
+    border-radius: 50px;
     .progress-bar.blue{
       background: #F47B2E;
     }
@@ -21,13 +23,15 @@
   }
 
   .caps {
+    position: absolute;
+    top: 18px;
+    left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: $box-space-16;
-    font-weight: 200;
-
+    font-weight: 600;
+    color: $alt-text-color;
     &__soft {
       width: 23%;
       display: flex;

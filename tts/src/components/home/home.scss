@@ -1,6 +1,6 @@
 @import '../../style/palette.scss';
 @import '../../style/variables.scss';
-@import '../../../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css';
+// @import '../../../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css';
 
 .home {
   width: 100%;
@@ -14,7 +14,6 @@
   overflow: auto;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 150px;
   background: linear-gradient(to top,#1976d2,$primary-color);
 
   .divider {
@@ -32,6 +31,7 @@
     font-size: 1rem;
     background: $background-color;
     color: $primary-text-color;
+    margin-bottom: $box-space-32;
     border-radius: 4px;
     padding-left: 0;
     padding-right: 0;
