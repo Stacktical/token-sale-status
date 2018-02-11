@@ -3,7 +3,6 @@
 <style lang="scss" src='@/components/home/home.scss'></style>
 
 <script>
-
 import ProgressBar from '@/components/progress-bar/Progress-bar'
 import EtherService from '@/components/home/home.service.js'
 import Spinner from '@/components/common/spinner/Spinner'

@@ -35,6 +35,11 @@
     border-radius: 4px;
     padding-left: 0;
     padding-right: 0;
+    .icon {
+      width: $box-space-64;
+      height: $box-space-64;
+      background-size: cover;
+    }
     .content {
       display: flex;
       width: 100%;
@@ -66,6 +71,8 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
+
+
         span {
           font-weight: 600;
           margin-bottom: $box-space-8;
@@ -74,15 +81,24 @@
         &-raised {
           background: $primary-color;
           border-radius: 4px 0px 0px 4px;
+          .icon {
+            background-image: url('assets/icon_coins.gif');
+          }
         }
 
         &-balance {
           background: $primary-color-dark;
+          .icon {
+            background-image: url('assets/icon_coins.gif');
+          }
         }
 
         &-totalSupply {
           background: $primary-color-darker;
           border-radius: 0px 4px 4px 0px;
+          .icon {
+            background-image: url('assets/icon_coins.gif');
+          }
         }
       }
 
@@ -115,10 +131,16 @@
           &.soft {
             background: lighten(#F47B2E, 10%);
             border-radius: 4px 0px 0px 4px;
+            .icon {
+              background-image: url('assets/icon_bullseye.gif');
+            }
           }
           &.mid {
             background: #F47B2E;
             border-radius: 0px 4px 4px 0px;
+            .icon {
+              background-image: url('assets/icon_bullseye.gif');
+            }
           }
         }
       }
