@@ -4,42 +4,25 @@
 
 <script>
 
-import EtherService from '@/components/progress-bar/progress-bar.service.js'
-
 export default {
   name: 'Progress-Bar',
   props: [
-    'icoAddress'
+    'icoAddress',
+    'softCap',
+    'midCap',
+    'max',
+    'ethRaised'
   ],
   data () {
     return {
-      ethRaised: 0,
-      ethBalance: 0,
-      totalSupply: 0
+      striped: true
     }
   },
-  created () {
-    EtherService.getTotalEthBalance(this, this.icoAddress).then((response) => {
-      this.ethBalance = response.body.result / 1e18
-    })
-
-    EtherService.getTotalTxs(this, this.icoAddress).then((response) => {
-      var total = 0
-      var totalWOGas = 0
-      for (var i = 0; i < response.body.result.length; i++) {
-        if (response.body.result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf') {
-          total += (response.body.result[i].value - response.body.result[i].cumulativeGasUsed) / 1e18
-          totalWOGas += (response.body.result[i].value) / 1e18
-        }
-      }
-      console.log(total)
-      console.log(totalWOGas)
-      this.ethRaised = total
-    })
-
-    EtherService.getTotalTokenSupply(this, this.icoAddress).then((response) => {
-      this.totalSupply = response.body.result
-    })
+  computed: {
+    ethRaisedWoMid () {
+      var value = this.ethRaised - this.midCap
+      return Math.round(value)
+    }
   },
   methods: {
 

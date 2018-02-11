@@ -1,30 +1,30 @@
 @font-face {
- font-family: "Stacktical Light";
- src: url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff2") format("woff2"),
+  font-family: "Stacktical";
+  src: url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff2") format("woff2"),
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-light-webfont/stackticalsans-light-webfont.eot") format("eot");
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
- font-family: "Stacktical Regular";
- src: url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff2") format("woff2"),
+  font-family: "Stacktical";
+  src: url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff2") format("woff2"),
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-regular-webfont/stackticalsans-regular-webfont.eot") format("eot");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
- font-family: "Stacktical Bold";
- src: url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff2") format("woff2"),
+  font-family: "Stacktical";
+  src: url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff2") format("woff2"),
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.woff") format("woff"),
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.ttf") format("ttf"),
         url("/static/fonts/stacktical_fonts/stackticalsans-bold-webfont/stackticalsans-bold-webfont.eot") format("eot");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 

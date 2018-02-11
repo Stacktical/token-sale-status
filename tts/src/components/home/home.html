@@ -1,8 +1,54 @@
 <div class="home">
   <h1>Token Sales Status</h1>
+
   <div class="container">
     <div class="content">
-      <ProgressBar :ico-address="icoAddress" ></ProgressBar>
+      <div class="content__address">
+        ICO Address: {{ icoAddress }}
+      </div>
+      <div class="divider"></div>
+      <transition-group class="transition-group" name="fade" mode="out-in">
+        <Spinner v-bind:key="1" v-show="loading"></Spinner>
+        <div v-bind:key="2" v-show="!loading" class="container-blocks">
+          <div class="block block-raised">
+            <div class="icon"></div>
+            <span>ETH Raised</span>
+              {{ raised }} ETH
+          </div>
+          <div class="block block-balance">
+            <div class="icon"></div>
+            <span>ETH Balance</span>
+             {{ balance }} ETH
+          </div>
+          <div class="block block-totalSupply">
+            <div class="icon"></div>
+            <span>Total token supply</span>
+              {{ totalSupply }}
+          </div>
+        </div>
+        <ProgressBar
+          v-bind:key="3"
+          v-show="!loading"
+          :ico-address="icoAddress"
+          :ethRaised="ethRaised"
+          :softCap="softCap"
+          :midCap="midCap"
+          :max="max"
+        ></ProgressBar>
+      </transition-group>
+
+      <div class="content__caps">
+        <div class="content__caps-block soft">
+          <div class="icon"></div>
+          <span>{{ softCap }} ETH</span>
+          Soft Capt
+        </div>
+        <div class="content__caps-block mid">
+          <div class="icon"></div>
+          <span>{{ midCap }} ETH</span>
+          Mid Capt
+        </div>
+      </div>
     </div>
   </div>
 </div>
