@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style>
-  @import './style/main.scss';
+  @import './style/base.scss';
 </style>

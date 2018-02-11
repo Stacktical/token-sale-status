@@ -12,16 +12,21 @@
   justify-content: flex-start;
   font-size: 2rem;
   overflow: auto;
+  padding-bottom: 150px;
   background: $primary-color-dark;
 
-  & .container {
-    max-width: 1366px;
+  .container {
+    max-width: 1024px;
     width: 100%;
     display: flex;
     font-size: 1rem;
-    padding: $box-space-16;
     background: $background-color;
     color: $primary-text-color;
     border-radius: 4px;
+    .content {
+      display: flex;
+      width: 100%;
+      padding: $box-space-64;
+    }
   }
 }
