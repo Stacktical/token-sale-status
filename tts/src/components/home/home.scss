@@ -59,6 +59,9 @@
         justify-content: center;
         margin-bottom: $box-space-32;
         margin-top: $box-space-32;
+        @media only screen and (max-width: 785px) {
+          flex-direction: column;
+        }
       }
 
       .block {
@@ -71,6 +74,9 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        @media only screen and (max-width: 785px) {
+            width: 100%;
+        }
 
 
         span {
@@ -114,6 +120,9 @@
         align-items: center;
         justify-content: center;
         margin-top: $box-space-32;
+        @media only screen and (max-width: 785px) {
+          flex-direction: column;
+        }
         &-block {
           min-height: 150px;
           width: calc(100% / 3);
@@ -123,7 +132,9 @@
           flex-direction: column;
           color: $alt-text-color;
           padding: $box-space-16;
-
+          @media only screen and (max-width: 785px) {
+            width: 100%;
+          }
           span {
             font-weight: 400;
             font-size: 1.6rem;
