@@ -53,8 +53,8 @@ export default {
       let total = 0
       const result = response.body.result
       for (var i = 0; i < result.length; i++) {
-        if (result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf') {
-          total += parseInt(result[i].value)
+        if ((result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf')) {
+          total += parseInt(result[i].value) - (parseInt(result[i].gasUsed) * parseInt(result[i].gasPrice))
         }
       }
       console.log('Total ETH through tx: ', total)
