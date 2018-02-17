@@ -6,6 +6,7 @@
 import ProgressBar from '@/components/progress-bar/Progress-bar'
 import EtherService from '@/components/home/home.service.js'
 import Spinner from '@/components/common/spinner/Spinner'
+import Footer from '@/components/common/footer/Footer'
 
 export default {
   name: 'Home',
@@ -42,21 +43,26 @@ export default {
     this.loading = true
 
     const totalEth = EtherService.getTotalEthBalance(this, this.icoAddress).then((response) => {
-      this.ethBalance = response.body.result / 1e18
+      let result = response.body.result
+
+      this.ethBalance = result / 1e18
+      console.log('Balance: ', result)
     })
 
     const totalTxs = EtherService.getTotalTxs(this, this.icoAddress).then((response) => {
       let total = 0
       const result = response.body.result
       for (var i = 0; i < result.length; i++) {
-        if (result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf') {
-          total += (result[i].value) / 1e18
+        if ((result[i].from !== '0x9df3a24d738ae98dea766cd89c3aef16583a4daf')) {
+          total += parseInt(result[i].value) - (parseInt(result[i].gasUsed) * parseInt(result[i].gasPrice))
         }
       }
-      this.ethRaised = total
+      console.log('Total ETH through tx: ', total)
+      this.ethRaised = total / 1e18
     })
 
     const totalToken = EtherService.getTotalTokenSupply(this, this.icoAddress).then((response) => {
+      console.log('Total token supply: ', response.body.result)
       this.totalSupply = response.body.result
     })
 
@@ -70,7 +76,8 @@ export default {
   },
   components: {
     ProgressBar,
-    Spinner
+    Spinner,
+    Footer
   }
 }
 </script>

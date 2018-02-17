@@ -1,6 +1,6 @@
 @import '../../style/palette.scss';
 @import '../../style/variables.scss';
-@import '../../../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css';
+// @import '../../../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css';
 
 .home {
   width: 100%;
@@ -14,7 +14,6 @@
   overflow: auto;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 150px;
   background: linear-gradient(to top,#1976d2,$primary-color);
 
   .divider {
@@ -32,6 +31,7 @@
     font-size: 1rem;
     background: $background-color;
     color: $primary-text-color;
+    margin-bottom: $box-space-32;
     border-radius: 4px;
     padding-left: 0;
     padding-right: 0;
@@ -59,6 +59,9 @@
         justify-content: center;
         margin-bottom: $box-space-32;
         margin-top: $box-space-32;
+        @media only screen and (max-width: 785px) {
+          flex-direction: column;
+        }
       }
 
       .block {
@@ -71,6 +74,9 @@
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        @media only screen and (max-width: 785px) {
+            width: 100%;
+        }
 
 
         span {
@@ -114,6 +120,9 @@
         align-items: center;
         justify-content: center;
         margin-top: $box-space-32;
+        @media only screen and (max-width: 785px) {
+          flex-direction: column;
+        }
         &-block {
           min-height: 150px;
           width: calc(100% / 3);
@@ -123,7 +132,9 @@
           flex-direction: column;
           color: $alt-text-color;
           padding: $box-space-16;
-
+          @media only screen and (max-width: 785px) {
+            width: 100%;
+          }
           span {
             font-weight: 400;
             font-size: 1.6rem;
