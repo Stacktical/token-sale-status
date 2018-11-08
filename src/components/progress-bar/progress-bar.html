@@ -1,17 +1,16 @@
 <div class="container-progress">
 
-  <b-progress height="50px" class="mt-1" :max="max">
-    <b-progress-bar v-show="ethRaised > softCap" :value="softCap" class="yellow" animated></b-progress-bar>
-    <b-progress-bar v-show="ethRaised > midCap" :value="midCap" class="blue" animated></b-progress-bar>
-    <b-progress-bar :value="ethRaisedWoMid" animated></b-progress-bar>
+  <b-progress class="mt-1" :max="hardCap">
+    <b-progress-bar v-bind:style="{ width: (priCap / hardCap * 100) + '%' }" v-show="currentRound > 1" :value="priCap" class="yellow" animated></b-progress-bar>
+    <b-progress-bar v-bind:style="{ width: (preCap / hardCap * 100) + '%' }" v-show="currentRound > 2" :value="preCap" class="blue" animated></b-progress-bar>
+    <b-progress-bar v-bind:style="{ width: ((hardCap - preCap - priCap) / hardCap * 100) + '%' }" v-show="currentRound > 3" :value="hardCap" class="red" animated></b-progress-bar>
+    <b-progress-bar v-show="currentRound < 4" :value="raised" animated></b-progress-bar>
   </b-progress>
 
   <div class="caps">
-    <div class="caps__soft">{{softCap}} eth</div>
-    <div class="caps__mid">{{midCap}} eth</div>
-    <div class="caps__infinity">
-      <span>+ {{ ethRaisedWoMid }} eth</span>
-    </div>
+    <div v-bind:style="{ width: (priCap / hardCap * 100) + '%' }" class="caps__soft">Private-sale</div>
+    <div v-bind:style="{ width: (preCap / hardCap * 100) + '%' }" class="caps__mid">Pre-sale</div>
+    <div v-bind:style="{ width: ((hardCap - preCap - priCap) / hardCap * 100) + '%' }" class="caps__infinity">Public-sale</div>
   </div>
 
 </div>
