@@ -7,11 +7,12 @@
 export default {
   name: 'Progress-Bar',
   props: [
-    'icoAddress',
+    'currentRound',
+    'priCap',
+    'preCap',
     'softCap',
-    'midCap',
-    'max',
-    'ethRaised'
+    'hardCap',
+    'totalRaised'
   ],
   data () {
     return {
@@ -19,9 +20,16 @@ export default {
     }
   },
   computed: {
-    ethRaisedWoMid () {
-      var value = this.ethRaised - this.midCap
-      return Math.round(value)
+    raised () {
+      if (this.currentRound == 1) {
+        return Math.round(this.totalRaised)
+      } else if (this.currentRound == 2) {
+        return Math.round(Number(this.totalRaised) - Number(this.priCap))
+      } else if (this.currentRound == 3) {
+        return Math.round(Number(this.totalRaised) - Number(this.priCap) - Number(this.preCap))
+      } else {
+        return 0
+      }
     }
   },
   methods: {

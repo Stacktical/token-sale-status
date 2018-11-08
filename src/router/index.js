@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/:address',
+      path: '/:_tokenAddress/:_icoAddress',
       name: 'Address',
       props: true,
       component: Home

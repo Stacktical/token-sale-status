@@ -10,14 +10,5 @@ export default {
   data () {
     return {}
   },
-  computed: {
-    ethRaisedWoMid () {
-      var value = this.ethRaised - this.midCap
-      return Math.round(value)
-    }
-  },
-  methods: {
-
-  }
 }
 </script>

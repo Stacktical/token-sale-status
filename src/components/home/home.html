@@ -4,7 +4,8 @@
   <div class="container">
     <div class="content">
       <div class="content__address">
-        ICO Address: {{ icoAddress }}
+        <p>Token address: {{ tokenAddress }}</p>
+        <p>ICO address: {{ icoAddress }}</p>
       </div>
       <div class="divider"></div>
       <transition-group class="transition-group" name="fade" mode="out-in">
@@ -17,23 +18,24 @@
           </div>
           <div class="block block-balance">
             <div class="icon"></div>
-            <span>ETH Balance</span>
-            <p>{{ balance }} ETH</p>
+            <span>DSLA Sold</span>
+            <p>{{ sold }} DSLA</p>
           </div>
           <div class="block block-totalSupply">
             <div class="icon"></div>
-            <span>Total token supply</span>
-            <p>{{ totalSupply }}</p>
+            <span>Total supply</span>
+            <p>{{ totalSupply }} DSLA</p>
           </div>
         </div>
         <ProgressBar
           v-bind:key="3"
           v-show="!loading"
-          :ico-address="icoAddress"
-          :ethRaised="ethRaised"
+          :totalRaised="totalRaised"
           :softCap="softCap"
-          :midCap="midCap"
-          :max="max"
+          :hardCap="hardCap"
+          :currentRound="currentRound"
+          :priCap="priCap"
+          :preCap="preCap"
         ></ProgressBar>
       </transition-group>
 
@@ -41,12 +43,12 @@
         <div class="content__caps-block soft">
           <div class="icon"></div>
           <span>{{ softCap }} ETH</span>
-          Soft Capt
+          Soft cap
         </div>
         <div class="content__caps-block mid">
           <div class="icon"></div>
-          <span>{{ midCap }} ETH</span>
-          Mid Capt
+          <span>{{ hardCap }} ETH</span>
+          Hard cap
         </div>
       </div>
     </div>
