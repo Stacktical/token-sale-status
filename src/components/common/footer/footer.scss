@@ -32,7 +32,6 @@
         width: 64px;
         height: auto;
         margin-right: $box-space-64;
-        animation: goodRipple .8s linear infinite;
         border-radius: 50%;
       }
       p {
@@ -75,13 +74,5 @@
         background: $accent-color;
       }
     }
-  }
-}
-@keyframes goodRipple {
-  0% {
-    box-shadow:0 0 0 0 rgba(247, 154, 94,.3),0 0 0 .5em rgba(247, 154, 94,.1),0 0 0 1.5em rgba(247, 154, 94,.1)
-  }
-  100% {
-    box-shadow:0 0 0 .5em rgba(247, 154, 94,.1),0 0 0 1.5em rgba(247, 154, 94,.1),0 0 0 2.5em rgba(247, 154, 94,0)
   }
 }

@@ -21,6 +21,13 @@ Vue.use(VueBootstrap)
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
+})
+
+Vue.filter('formatNumber', function (value) {
+  const rounded = Math.round(value * 100) / 100
+  return rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 })

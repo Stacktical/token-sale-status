@@ -2,48 +2,56 @@
 @import '../../style/variables.scss';
 
 .container-progress {
+  margin-bottom: 50px;
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
   .progress {
     height: 50px;
     width: 100%;
     border-radius: 50px;
-    .progress-bar.blue{
-      background: #F47B2E;
+
+    .progress-bar.private {
+      background: lighten($success-primary-color, 20%);
     }
-    .progress-bar.yellow{
-      background: lighten(#F47B2E, 10%);
+
+    .progress-bar.pre {
+      background: $success-primary-color;
     }
-    .progress-bar.red{
-      background-color: $danger-primary-color;
+
+    .progress-bar.public {
+        background: darken($success-primary-color, 20%);
     }
   }
 
   .caps {
     position: absolute;
-    top: 0;
+    top: 70px;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-weight: 600;
-    color: $alt-text-color;
+    font-weight: 700;
+    text-transform: uppercase;
+
     &__soft {
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     &__mid {
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     &__infinity {
       display: flex;
       align-items: center;

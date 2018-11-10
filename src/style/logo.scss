@@ -1,0 +1,102 @@
+.logo {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 4.5em;
+    font-family: 'Stacktical Sans Bold';
+    height: auto;
+    color: white;
+    background-color: #1976D2;
+
+    .stacktical {
+        @include absolute-center();
+        z-index: 2;
+        vertical-align: middle;
+        margin: auto;
+        height: 240px;
+        line-height: 240px;
+    }
+
+    .thunder {
+        @include absolute-center();
+        margin: auto;
+        width: 70px;
+        height: 70px;
+    }
+
+    .thunder::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 10px;
+        width: 0;
+        height: 0;
+        border-left: 51px solid transparent;
+        border-bottom: 150px solid #2196F3;
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        z-index: 1;
+    }
+
+    .thunder::after {
+        display: block;
+        content: " ";
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 0;
+        height: 0;
+        border-right: 51px solid transparent;
+        border-top: 150px solid #2196F3;
+        transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        z-index: 1;
+    }
+
+    .thunder.layer-alpha::before {
+        /* red */
+        top: -6px;
+        z-index: 0;
+        border-bottom-color: rgba(#f69d88, 0.9);
+    }
+
+    .thunder.layer-beta::before {
+        /* yellow */
+        top: -12px;
+        z-index: 0;
+        border-bottom-color: rgba(#ffe1a5, 0.7);
+    }
+
+    .thunder.layer-gamma::before {
+        /* green */
+        top: -18px;
+        z-index: 0;
+        border-bottom-color: rgba(#cde9e0, 0.5);
+    }
+
+    .thunder.layer-alpha::after {
+        /* red */
+        top: 6px;
+        z-index: 0;
+        border-top-color: rgba(#f69d88, 0.9);
+    }
+
+    .thunder.layer-beta::after {
+        /* yellow */
+        top: 12px;
+        z-index: 0;
+        border-top-color: rgba(#ffe1a5, 0.7);
+    }
+
+    .thunder.layer-gamma::after {
+        /* green */
+        top: 18px;
+        z-index: 0;
+        border-top-color: rgba(#cde9e0, 0.5);
+    }
+}

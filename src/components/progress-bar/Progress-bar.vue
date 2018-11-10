@@ -21,11 +21,11 @@ export default {
   },
   computed: {
     raised () {
-      if (this.currentRound == 1) {
+      if (this.currentRound === 1) {
         return Math.round(this.totalRaised)
-      } else if (this.currentRound == 2) {
+      } else if (this.currentRound === 2) {
         return Math.round(Number(this.totalRaised) - Number(this.priCap))
-      } else if (this.currentRound == 3) {
+      } else if (this.currentRound === 3) {
         return Math.round(Number(this.totalRaised) - Number(this.priCap) - Number(this.preCap))
       } else {
         return 0

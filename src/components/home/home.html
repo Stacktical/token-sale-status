@@ -4,8 +4,7 @@
   <div class="container">
     <div class="content">
       <div class="content__address">
-        <p>Token address: {{ tokenAddress }}</p>
-        <p>ICO address: {{ icoAddress }}</p>
+        <h1 class="content__address-sale">{{ icoAddress }}</h1>
       </div>
       <div class="divider"></div>
       <transition-group class="transition-group" name="fade" mode="out-in">
@@ -14,17 +13,17 @@
           <div class="block block-raised">
             <div class="icon"></div>
             <span>ETH Raised</span>
-            <p>{{ raised }} ETH</p>
+            <p>{{ raised | formatNumber}} ETH</p>
           </div>
           <div class="block block-balance">
             <div class="icon"></div>
             <span>DSLA Sold</span>
-            <p>{{ sold }} DSLA</p>
+            <p>{{ sold | formatNumber}} DSLA</p>
           </div>
           <div class="block block-totalSupply">
             <div class="icon"></div>
             <span>Total supply</span>
-            <p>{{ totalSupply }} DSLA</p>
+            <p>{{ totalSupply | formatNumber}} DSLA</p>
           </div>
         </div>
         <ProgressBar
