@@ -55,12 +55,12 @@ export default {
 
     const currentIcoRound = crowdSaleInstance.methods.currentIcoRound().call().then(response => {
       console.log(response, 'currentRound')
-      this.currentRound = 3
+      this.currentRound = response
     })
 
     const totalRaised = crowdSaleInstance.methods.raisedFunds().call().then(response => {
       console.log(response, 'totalRaised')
-      this.totalRaised = 10000
+      this.totalRaised = utils.fromWei(response, 'ether')
     })
 
     const distributedTokens = crowdSaleInstance.methods.distributedTokens().call().then(response => {
